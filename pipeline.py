@@ -34,6 +34,13 @@ def run_generator():
     return generate()
 
 
+
+def run_llm():
+    """Generate Spanish descriptions for businesses using LLM."""
+    from llm_content import enrich
+    return enrich()
+
+
 def run_demo():
     from generator import generate as gen
     demos = [
@@ -111,6 +118,7 @@ def main():
         "discover": run_discovery, "check": run_checker,
         "gather": run_gatherer, "generate": run_generator,
         "deploy": run_deploy,
+        "llm": run_llm,
         "demo": run_demo, "full": run_full,
     }
     if cmd not in commands:
