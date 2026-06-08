@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "public": true,
+  "outputDirectory": "output/html",
+  "cleanUrls": true,
+  "trailingSlash": false
+}

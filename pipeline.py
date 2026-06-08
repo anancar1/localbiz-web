@@ -81,6 +81,20 @@ def run_demo():
     return gen(demos, only_without_website=False)
 
 
+
+def run_deploy():
+    """Deploy generated pages to Vercel."""
+    from deploy import deploy
+    import os
+    token = os.environ.get("VERCEL_TOKEN", "")
+    if len(sys.argv) > 2:
+        token = sys.argv[2]
+    if not token:
+        print("Set VERCEL_TOKEN or pass as: python pipeline.py deploy <token>")
+        return
+    return deploy(token)
+
+
 def run_full():
     print("=" * 60)
     print("  localbiz-web — Pipeline completo")
@@ -96,6 +110,7 @@ def main():
     commands = {
         "discover": run_discovery, "check": run_checker,
         "gather": run_gatherer, "generate": run_generator,
+        "deploy": run_deploy,
         "demo": run_demo, "full": run_full,
     }
     if cmd not in commands:
