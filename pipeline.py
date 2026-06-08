@@ -94,14 +94,14 @@ def run_demo():
                       "Viernes: 09:30-13:30, 16:00-20:00",
                       "Sabado: 09:30-14:00", "Domingo: Cerrado"],
             "photos": ["https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800"],
-            "description": "15 anos cuidando tu imagen en el corazon de Xativa. Especialistas en coloracion, mechas balayage, tratamientos capilares y alisados. Trabajamos con productos profesionales de primeras marcas para garantizar los mejores resultados.",
+            "description": "Llevamos 15 años en el mismo sitio y no pensamos movernos. Aquí no hacemos peinados de pasarela ni te vendemos productos que no necesitas. Te escuchamos, te aconsejamos y te dejamos el pelo exactamente como querías. Trabajamos con primeras marcas porque tu pelo se lo merece, y tratamos a cada clienta como si fuera la única. Pide cita y ven a contarnos qué necesitas.",
             "services": [
-                {"icon": "💇", "name": "Corte y Peinado", "description": "Corte personalizado + lavado + peinado. Asesoramiento de imagen incluido.", "price": "22€"},
-                {"icon": "🎨", "name": "Coloracion", "description": "Tinte completo, mechas balayage, babylights, reflejos. Con productos sin amoniaco.", "price": "desde 38€"},
-                {"icon": "✨", "name": "Tratamientos Capilares", "description": "Queratina, botox capilar, reestructuracion. Devuelve la vida a tu cabello.", "price": "desde 30€"},
-                {"icon": "💆", "name": "Peinados de Fiesta", "description": "Recogidos, ondas, semirecogidos para bodas, bautizos y eventos.", "price": "desde 35€"},
-                {"icon": "👰", "name": "Pack Novia", "description": "Prueba + peinado el gran dia + maquillaje profesional + tratamiento pre-boda.", "price": "desde 150€"},
-                {"icon": "✂️", "name": "Arreglo de Barba", "description": "Perfilado, recorte, cuidado facial. Tambien hacemos caballero.", "price": "10€"}
+                {"icon": "💇", "name": "Corte y Peinado", "description": "Corte personalizado + lavado + peinado. Te escuchamos antes de tocar la tijera. Asesoramiento de imagen incluido sin coste.", "price": "22€", "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600"},
+                {"icon": "🎨", "name": "Coloración", "description": "Tinte completo, mechas balayage, babylights, reflejos. Solo trabajamos con productos sin amoniaco. El color que buscas, sin dañar tu pelo.", "price": "desde 38€", "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600"},
+                {"icon": "✨", "name": "Tratamientos Capilares", "description": "Queratina, botox capilar, reestructuración. Devuelve la vida a tu cabello en una sola sesión. Resultados visibles desde el primer día.", "price": "desde 30€", "image": "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600"},
+                {"icon": "💆", "name": "Peinados de Fiesta", "description": "Recogidos, ondas, semirecogidos para bodas, bautizos y eventos especiales. Ven con tiempo, hacemos prueba previa.", "price": "desde 35€", "image": "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=600"},
+                {"icon": "👰", "name": "Pack Novia", "description": "Prueba de peinado + maquillaje profesional + tratamiento pre-boda. El gran día es tuyo, nosotras nos encargamos de que brilles.", "price": "desde 150€", "image": "https://images.unsplash.com/photo-1595475884562-073c30d45670?w=600"},
+                {"icon": "✂️", "name": "Arreglo de Barba", "description": "Perfilado, recorte, cuidado facial con productos específicos. Porque ellos también se cuidan. También hacemos caballero completo.", "price": "10€", "image": "https://images.unsplash.com/photo-1621605815971-fbc98d665594?w=600"}
             ],
             "faq": [
                 {"question": "Hay que pedir cita?", "answer": "Si, trabajamos con cita previa para garantizar la mejor atencion. Puedes llamarnos o enviar un WhatsApp."},
@@ -116,9 +116,9 @@ def run_demo():
             "phone": "+34 610 55 42 87", "type": "Electricista",
             "hours": ["Lunes-Viernes: 09:00-19:00", "Sabado: 09:00-14:00", "Urgencias: 24h"],
             "photos": ["https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800"],
-            "description": "Servicios electricos profesionales en Xativa y toda la comarca de La Costera. Instalaciones nuevas, reformas, averias urgentes y boletines electricos (CIE). Servicio 24 horas para urgencias. Electricistas certificados con mas de 20 anos de experiencia.",
+            "description": "Más de 20 años enchufando Xàtiva. Literalmente. Nos llaman cuando se va la luz en plena cena de Navidad, cuando hay que reformar una casa entera, cuando toca pasar el boletín. Llegamos rápido, miramos el problema, te contamos qué pasa sin tecnicismos y te damos presupuesto en el momento. Urgencias 24h porque las averías no avisan. Y nunca, nunca cobramos el desplazamiento.",
             "services": [
-                {"icon": "⚡", "name": "Urgencias 24h", "description": "Averias electricas urgentes. Cortocircuitos, saltos de diferencial, apagones. Respuesta en menos de 1 hora.", "price": ""},
+                {"icon": "⚡", "name": "Urgencias 24h", "description": "Averías eléctricas urgentes. Cortocircuitos, saltos de diferencial, apagones. Respuesta en menos de 1 hora. No cobramos desplazamiento.", "price": "", "image": "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600"},
                 {"icon": "🔌", "name": "Instalaciones Nuevas", "description": "Instalaciones electricas completas para viviendas, locales y naves. Proyectos y memorias tecnicas.", "price": ""},
                 {"icon": "🛠️", "name": "Reformas", "description": "Renovacion de instalaciones antiguas, cambio de cuadros electricos, domotizacion.", "price": ""},
                 {"icon": "📋", "name": "Boletines CIE", "description": "Emitimos certificados de instalacion electrica y boletines oficiales para contratos de luz.", "price": ""},

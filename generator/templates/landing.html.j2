@@ -169,7 +169,7 @@
 
 <section class="hero">
     {% if business.photos %}
-    <img src="{{ business.photos[0] }}" alt="" class="hero__bg" loading="eager">
+    <img src="{{ business.photos[0] }}" alt="{{ business.name }}" class="hero__bg" loading="eager">
     {% endif %}
     <div class="hero__overlay"></div>
     <div class="hero__inner">
@@ -270,6 +270,7 @@
         <div class="menu-grid">
             {% for svc in business.services %}
             <div class="menu-card">
+                {% if svc.image %}<img src="{{ svc.image }}" alt="{{ svc.name }}" class="menu-card__image" loading="lazy">{% endif %}
                 <div class="menu-card__body">
                     <div class="menu-card__name" style="align-items:center">
                         <span style="display:flex;align-items:center;gap:10px">{{ svc.icon or '✦' }} {{ svc.name }}</span>
@@ -391,8 +392,19 @@
 {% endif %}
 
 <section class="cta-section">
+    {% if business.category == 'restaurante' %}
     <h2 class="cta-section__title">¿Vienes a comer?</h2>
     <p class="cta-section__text">Llama y reserva tu mesa. O pásate sin avisar, que aquí siempre cabe uno más.</p>
+    {% elif business.category in ['peluqueria', 'barberia'] %}
+    <h2 class="cta-section__title">¿Te cuidamos el pelo?</h2>
+    <p class="cta-section__text">Pide cita por teléfono o WhatsApp. Primera consulta sin compromiso.</p>
+    {% elif business.category in ['electricista', 'fontanero', 'mecanico coches'] %}
+    <h2 class="cta-section__title">¿Necesitas ayuda?</h2>
+    <p class="cta-section__text">Llámanos y cuéntanos tu avería. Presupuesto sin compromiso. Urgencias 24h.</p>
+    {% else %}
+    <h2 class="cta-section__title">¿Hablamos?</h2>
+    <p class="cta-section__text">Contacta con {{ business.name }} para más información o presupuesto sin compromiso.</p>
+    {% endif %}
     {% if business.phone %}
     <a href="tel:{{ business.phone }}" class="btn btn--primary">{{ business.phone }}</a>
     {% endif %}
