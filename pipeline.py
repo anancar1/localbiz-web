@@ -54,16 +54,27 @@ def run_demo():
                       "Jueves: 13:00-16:00, 20:00-23:00",
                       "Viernes: 13:00-16:00, 20:00-23:30",
                       "Sabado: 13:00-16:00, 20:00-23:30", "Domingo: Cerrado"],
-            "photos": ["https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
+            "photos": ["https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200", "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800", "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800", "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800", "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=800",
                        "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800"],
-            "description": "Cocina mediterranea de temporada. Arroces, fideuas y platos tradicionales en el casco historico de Xativa. Ingredientes frescos del mercado y recetas de la abuela que han pasado de generacion en generacion.",
-            "menu_items": [
-                {"name": "Arroz del Senyoret", "description": "Arroz seco con gambas, cigalas y sepia, pelado a mano. Nuestro plato estrella.", "price": "16.50"},
-                {"name": "Fideua Negra", "description": "Fideua con tinta de calamar, alioli casero y gambon fresco de la lonja.", "price": "15.00"},
-                {"name": "Esgarraet", "description": "Pimientos rojos asados, bacalao desmigado, ajo y aceite de oliva virgen extra.", "price": "9.50"},
-                {"name": "Croquetas de Puchero", "description": "Croquetas cremosas caseras hechas con la carne del cocido tradicional.", "price": "8.00"},
-                {"name": "Torrija Caramelizada", "description": "Torrija de brioche con crema inglesa y helado de vainilla.", "price": "7.00"},
-                {"name": "Menu del Dia", "description": "Primero, segundo, bebida y postre o cafe. De lunes a viernes.", "price": "13.90"}
+            "description": "El Raco es esa esquina del casco antiguo de Xativa donde siempre huele a algo bueno. Llevamos desde 1998 cocinando lo que nos enseno la abuela: arroces de fuego lento, fideuas de la lonja, croquetas que se deshacen. No hay carta interminable ni pretensiones. Hay producto de aqui, recetas de siempre y una terraza donde se esta mejor que en casa. Ven a comer, que para eso estamos.",
+            "menu_categories": [
+                {"name": "Entrantes", "items": [
+                    {"name": "Esgarraet de la Casa", "description": "Pimientos rojos asados al horno de lena, bacalao desmigado del Cantabrico, ajo confitado y aceite de oliva virgen extra de la Sierra de Mariola.", "price": "9.50", "image": "https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=600"},
+                    {"name": "Croquetas de Puchero", "description": "Cremosas por dentro, crujientes por fuera. Las hace la abuela cada manana con la carne del cocido tradicional.", "price": "8.00", "image": "https://images.unsplash.com/photo-1604909052743-94e838986d24?w=600"},
+                    {"name": "Ensalada de la Huerta", "description": "Tomate valenciano, cebolla tierna, aceitunas de la comarca, ventresca de bonito del norte. Simple, fresca, perfecta.", "price": "7.50", "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600"}
+                ]},
+                {"name": "Arroces y Fideuas", "items": [
+                    {"name": "Arroz del Senyoret", "description": "Nuestro plato insignia. Arroz seco con gambas, cigalas y sepia, todo pelado a mano para que no tengas que mancharte los dedos. Caldo de pescado de roca hecho a fuego lento.", "price": "16.50", "image": "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=600"},
+                    {"name": "Fideua Negra", "description": "Fideua de tinta de calamar con alioli casero de ajo morado. Gambon fresco de la lonja de Gandia. La receta que nos enseno el tio Pepe.", "price": "15.00", "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600"},
+                    {"name": "Arroz con Verduras", "description": "De la huerta a la mesa. Alcachofa, habas, pimiento, ajetes tiernos. Caldo vegetal casero. Vegano y delicioso.", "price": "13.00", "image": "https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?w=600"}
+                ]},
+                {"name": "Postres Caseros", "items": [
+                    {"name": "Torrija Caramelizada", "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600", "description": "Brioche empapado en leche infusionada con canela y limon. Caramelo crujiente, crema inglesa y helado de vainilla. Hecha al momento.", "price": "7.00", "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600"},
+                    {"name": "Tarta de Queso", "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600", "description": "Estilo La Vina. Solo cinco ingredientes. Cremosa por dentro, tostada por fuera. No podemos dejar de hacerla.", "price": "6.50", "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600"}
+                ]},
+                {"name": "Menu del Dia", "items": [
+                    {"name": "Menu del Dia", "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600", "description": "Primero, segundo, bebida y postre o cafe. De lunes a viernes. Cambia cada semana segun lo que trae el mercado.", "price": "13.90", "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600"}
+                ]}
             ],
             "faq": [
                 {"question": "Teneis terraza?", "answer": "Si, disponemos de terraza exterior en la plaza. Perfecta para los meses de primavera y verano."},
