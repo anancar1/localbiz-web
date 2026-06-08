@@ -3,176 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Electricitat Navarro — electricista en Xàtiva, Valencia. Contacta y conoce nuestros servicios.">
+    <meta name="description" content="Electricitat Navarro — electricista en Xàtiva, Valencia. Servicios electricos profesionales en Xativa y toda la comarca de La Costera. Instalaciones nuevas, reformas, averias ur">
     <title>Electricitat Navarro — Electricista en Xàtiva</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-primary: #d97706;
-            --color-primary-dark: #b45309;
-            --color-primary-light: #fbbf24;
-            --color-secondary: #0f172a;
-            --color-accent: #059669;
-            --color-bg: #ffffff;
-            --color-bg-alt: #f8fafc;
-            --color-bg-warm: #fffbeb;
-            --color-bg-dark: #0f172a;
-            --color-text: #1e293b;
-            --color-text-light: #64748b;
-            --color-text-white: #ffffff;
-            --color-border: #e2e8f0;
-            --color-star: #f59e0b;
-            --color-whatsapp: #25d366;
-            --font-heading: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            --font-size-h1: 2.75rem;
-            --font-size-h2: 2rem;
-            --font-size-h3: 1.4rem;
-            --font-size-body: 1.05rem;
-            --font-size-small: 0.875rem;
-            --font-size-xs: 0.75rem;
-            --spacing-xs: 0.4rem;
-            --spacing-sm: 0.8rem;
-            --spacing-md: 1.5rem;
-            --spacing-lg: 3rem;
-            --spacing-xl: 5rem;
-            --radius-sm: 6px;
-            --radius-md: 10px;
-            --radius-lg: 20px;
-            --radius-full: 9999px;
-            --shadow-sm: 0 1px 2px rgba(0,0,0,0.06);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
-            --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
-            --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
+            --warm-black: #222222;
+            --text-secondary: #6a6a6a;
+            --text-muted: #9ca3af;
             --cat-color: #d97706;
+            --surface: #ffffff;
+            --surface-alt: #fafaf9;
+            --surface-warm: #fef7ed;
+            --border: #e5e7eb;
+            --card-shadow: 0 0 0 1px rgba(0,0,0,0.03), 0 2px 8px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+            --card-hover: 0 0 0 1px rgba(0,0,0,0.05), 0 4px 20px rgba(0,0,0,0.10);
+            --radius-sm: 10px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-full: 999px;
         }
         
-            :root { --cat-color: #f59e0b; }
+            :root { --cat-color: #d97706; --cat-light: #fffbeb; }
         
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-        html{scroll-behavior:smooth}
-        body{font-family:var(--font-body);font-size:var(--font-size-body);color:var(--color-text);background:var(--color-bg);line-height:1.7;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+        html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+        body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;font-size:1.05rem;color:var(--warm-black);background:var(--surface);line-height:1.65}
         img{max-width:100%;display:block}
-        a{color:inherit}
-        .container{max-width:1100px;margin:0 auto;padding:0 var(--spacing-sm)}
+        a{color:inherit;text-decoration:none}
+        .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
         /* HEADER */
-        .header{background:var(--color-bg);box-shadow:var(--shadow-sm);position:sticky;top:0;z-index:1000;height:72px}
-        .header__inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:100%;padding:0 var(--spacing-sm)}
-        .header__logo{font-family:var(--font-heading);font-size:var(--font-size-h3);font-weight:700;color:var(--color-text);text-decoration:none}
-        .header__logo span{color:var(--cat-color)}
-        .header__cta{background:var(--cat-color);color:#fff;padding:10px 24px;border-radius:var(--radius-full);text-decoration:none;font-weight:600;font-size:var(--font-size-small);transition:transform 0.2s}
-        .header__cta:hover{transform:scale(1.03)}
+        .header{background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);position:sticky;top:0;z-index:100;border-bottom:1px solid transparent;transition:border-color 0.3s}
+        .header.scrolled{border-bottom-color:var(--border)}
+        .header__inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;padding:0 20px}
+        .header__logo{font-size:1.2rem;font-weight:700;color:var(--warm-black);display:flex;align-items:center;gap:8px}
+        .header__logo-dot{width:8px;height:8px;background:var(--cat-color);border-radius:50%}
+        .header__cta{background:var(--cat-color);color:#fff;padding:10px 22px;border-radius:var(--radius-full);font-weight:600;font-size:0.9rem;transition:transform 0.15s,box-shadow 0.15s}
+        .header__cta:hover{transform:scale(1.03);box-shadow:0 4px 16px rgba(0,0,0,0.15)}
+
         /* HERO */
-        .hero{position:relative;background:var(--color-bg-dark);color:var(--color-text-white);padding:var(--spacing-xl) var(--spacing-sm);text-align:center;overflow:hidden}
-        .hero__inner{max-width:800px;margin:0 auto;position:relative;z-index:2}
-        .hero__tag{display:inline-block;background:var(--cat-color);padding:6px 20px;border-radius:var(--radius-full);font-size:var(--font-size-small);font-weight:600;margin-bottom:var(--spacing-sm)}
-        .hero__title{font-family:var(--font-heading);font-size:var(--font-size-h1);margin-bottom:var(--spacing-sm);line-height:1.2}
-        .hero__subtitle{font-size:var(--font-size-h3);color:#cbd5e1;margin-bottom:var(--spacing-md)}
-        .hero__ctas{display:flex;gap:var(--spacing-sm);justify-content:center;flex-wrap:wrap}
-        .hero__btn{display:inline-block;padding:12px 32px;border-radius:var(--radius-full);text-decoration:none;font-weight:700;font-size:var(--font-size-body);transition:transform 0.2s, box-shadow 0.2s}
-        .hero__btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
-        .hero__btn--primary{background:var(--color-text-white);color:var(--color-text)}
-        .hero__btn--outline{border:2px solid var(--color-text-white);color:var(--color-text-white)}
-        .hero__bg-img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.35;z-index:1}
+        .hero{position:relative;min-height:520px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden;background:#1a1a1a}
+        .hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.55}
+        .hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.6) 60%,rgba(0,0,0,0.8) 100%)}
+        .hero__inner{position:relative;z-index:2;max-width:700px;padding:40px 20px}
+        .hero__badge{display:inline-block;background:var(--cat-color);padding:6px 18px;border-radius:var(--radius-full);font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:16px}
+        .hero__title{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:8px;letter-spacing:-0.02em}
+        .hero__rating{display:inline-flex;align-items:center;gap:6px;margin-bottom:12px;font-size:0.95rem}
+        .hero__stars{color:#fbbf24;letter-spacing:1px}
+        .hero__address{color:rgba(255,255,255,0.8);font-size:0.95rem;margin-bottom:24px}
+        .hero__ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+        .btn{padding:13px 28px;border-radius:var(--radius-full);font-weight:600;font-size:0.95rem;transition:all 0.2s;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+        .btn--primary{background:#fff;color:var(--warm-black)}
+        .btn--primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2)}
+        .btn--outline{border:2px solid rgba(255,255,255,0.6);color:#fff}
+        .btn--outline:hover{background:rgba(255,255,255,0.1);border-color:#fff}
+
+        /* OPEN BADGE */
+        .open-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:var(--radius-full);font-size:0.8rem;font-weight:600;margin-top:8px}
+        .open-badge--open{background:#dcfce7;color:#166534}
+        .open-badge--closed{background:#fee2e2;color:#991b1b}
+        .open-badge__dot{width:7px;height:7px;border-radius:50%}
+        .open-badge--open .open-badge__dot{background:#16a34a}
+        .open-badge--closed .open-badge__dot{background:#dc2626}
+
         /* SECTIONS */
-        .section{padding:var(--spacing-lg) var(--spacing-sm)}
-        .section__title{font-family:var(--font-heading);font-size:var(--font-size-h2);margin-bottom:var(--spacing-xs);text-align:center}
-        .section__subtitle{color:var(--color-text-light);text-align:center;margin-bottom:var(--spacing-md);max-width:600px;margin-left:auto;margin-right:auto}
-        .section--alt{background:var(--color-bg-alt)}
-        .section--warm{background:var(--color-bg-warm)}
-        /* CARDS */
-        .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--spacing-md);max-width:1100px;margin:0 auto;padding:0 var(--spacing-sm)}
-        .card{background:var(--color-bg);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);padding:var(--spacing-md);transition:transform 0.2s, box-shadow 0.2s;border:1px solid var(--color-border)}
-        .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
-        .card__icon{font-size:2rem;margin-bottom:var(--spacing-sm)}
-        .card__title{font-family:var(--font-heading);font-size:var(--font-size-h3);margin-bottom:var(--spacing-xs)}
-        .card__text{color:var(--color-text-light);font-size:var(--font-size-small)}
-        .card__price{display:inline-block;margin-top:var(--spacing-sm);font-weight:700;color:var(--cat-color);font-size:var(--font-size-h3)}
-        /* INFO GRID */
-        .info{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:var(--spacing-md);max-width:1100px;margin:0 auto;padding:0 var(--spacing-sm)}
-        .info-card{background:var(--color-bg-alt);padding:var(--spacing-md);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);border:1px solid var(--color-border)}
-        .info-card__icon{font-size:1.5rem;margin-bottom:var(--spacing-xs)}
-        .info-card__title{font-family:var(--font-heading);font-size:var(--font-size-h3);margin-bottom:var(--spacing-xs)}
-        .info-card__text{color:var(--color-text-light);font-size:var(--font-size-small)}
-        .info-card__link{color:var(--cat-color);text-decoration:none;font-weight:600;display:inline-block;margin-top:var(--spacing-sm)}
+        .section{padding:64px 0}
+        .section--alt{background:var(--surface-alt)}
+        .section__header{text-align:center;margin-bottom:40px}
+        .section__label{display:inline-block;color:var(--cat-color);font-weight:600;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px}
+        .section__title{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;letter-spacing:-0.02em;color:var(--warm-black)}
+        .section__subtitle{color:var(--text-secondary);max-width:550px;margin:8px auto 0;font-size:1.05rem}
+
+        /* ABOUT */
+        .about{max-width:680px;margin:0 auto;text-align:center}
+        .about__text{color:var(--text-secondary);font-size:1.1rem;line-height:1.8}
+
+        /* MENU */
+        .menu-category{margin-bottom:48px}
+        .menu-category:last-child{margin-bottom:0}
+        .menu-category__title{font-size:1.3rem;font-weight:700;margin-bottom:4px;color:var(--warm-black);padding-bottom:8px;border-bottom:2px solid var(--cat-color);display:inline-block}
+        .menu-category__desc{color:var(--text-secondary);font-size:0.9rem;margin-bottom:20px}
+        .menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+        .menu-card{background:var(--surface);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--card-shadow);transition:transform 0.2s,box-shadow 0.25s}
+        .menu-card:hover{transform:translateY(-4px);box-shadow:var(--card-hover)}
+        .menu-card__image{width:100%;height:200px;object-fit:cover}
+        .menu-card__body{padding:18px 20px 20px}
+        .menu-card__name{font-size:1.1rem;font-weight:700;margin-bottom:6px;display:flex;justify-content:space-between;align-items:start}
+        .menu-card__price{color:var(--cat-color);font-weight:700;font-size:1.1rem;white-space:nowrap;margin-left:12px}
+        .menu-card__desc{color:var(--text-secondary);font-size:0.9rem;line-height:1.6}
+
         /* GALLERY */
-        .gallery{max-width:1100px;margin:0 auto;padding:0 var(--spacing-sm)}
-        .gallery__grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:var(--spacing-sm)}
-        .gallery__item{border-radius:var(--radius-md);overflow:hidden;position:relative;aspect-ratio:1/1}
-        .gallery__img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s}
-        .gallery__item:hover .gallery__img{transform:scale(1.05)}
+        .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+        .gallery-grid__item{aspect-ratio:4/3;overflow:hidden;border-radius:var(--radius-sm);cursor:pointer}
+        .gallery-grid__img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s}
+        .gallery-grid__item:hover .gallery-grid__img{transform:scale(1.06)}
+        .gallery-grid__item:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+
+        /* INFO */
+        .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+        .info-card{background:var(--surface);padding:20px 24px;border-radius:var(--radius-md);box-shadow:var(--card-shadow);display:flex;align-items:start;gap:14px}
+        .info-card__icon{flex-shrink:0;width:40px;height:40px;background:var(--cat-light);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--cat-color)}
+        .info-card__content{min-width:0}
+        .info-card__label{font-size:0.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px}
+        .info-card__value{font-weight:600;font-size:0.95rem;word-break:break-word}
+        .info-card__link{color:var(--cat-color);font-weight:600;font-size:0.85rem;margin-top:4px;display:inline-block}
+
         /* HOURS */
-        .hours{list-style:none;display:grid;gap:var(--spacing-xs);max-width:500px;margin:0 auto}
-        .hours__item{display:flex;justify-content:space-between;padding:var(--spacing-xs) var(--spacing-md);background:var(--color-bg-alt);border-radius:var(--radius-sm)}
-        .hours__day{font-weight:600}.hours__time{color:var(--color-text-light)}
-        /* RATING */
-        .stars{color:var(--color-star);font-size:1.2rem}
-        .rating{display:inline-flex;align-items:center;gap:var(--spacing-xs);margin-bottom:var(--spacing-sm)}
-        .rating__score{font-weight:700;font-size:var(--font-size-h3)}
-        .rating__count{color:var(--color-text-light);font-size:var(--font-size-small)}
+        .hours{max-width:440px;margin:0 auto}
+        .hours__row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)}
+        .hours__row:last-child{border-bottom:none}
+        .hours__day{font-weight:600;font-size:0.95rem}
+        .hours__time{color:var(--text-secondary);font-size:0.9rem}
+        .hours__today{background:var(--cat-light);margin:0 -12px;padding:10px 12px;border-radius:var(--radius-sm)}
+
         /* FAQ */
-        .faq{max-width:750px;margin:0 auto;padding:0 var(--spacing-sm)}
-        .faq__item{background:var(--color-bg-alt);border-radius:var(--radius-md);padding:var(--spacing-md);margin-bottom:var(--spacing-sm);border:1px solid var(--color-border)}
-        .faq__q{font-weight:700;margin-bottom:var(--spacing-xs);color:var(--color-text)}
-        .faq__a{color:var(--color-text-light);font-size:var(--font-size-small)}
-        /* CTA SECTION */
-        .cta{background:linear-gradient(135deg, var(--color-bg-dark), #1a2a40);color:var(--color-text-white);padding:var(--spacing-xl) var(--spacing-sm);text-align:center}
-        .cta__inner{max-width:650px;margin:0 auto}
-        .cta__title{font-family:var(--font-heading);font-size:var(--font-size-h2);margin-bottom:var(--spacing-sm)}
-        .cta__text{margin-bottom:var(--spacing-md);opacity:0.9;font-size:var(--font-size-body)}
-        .cta__button{display:inline-block;background:var(--cat-color);color:var(--color-text-white);padding:14px 40px;border-radius:var(--radius-full);text-decoration:none;font-weight:700;font-size:var(--font-size-body);transition:transform 0.2s, box-shadow 0.2s}
-        .cta__button:hover{transform:scale(1.04);box-shadow:var(--shadow-lg)}
+        .faq{max-width:650px;margin:0 auto}
+        .faq__item{padding:18px 0;border-bottom:1px solid var(--border)}
+        .faq__item:last-child{border-bottom:none}
+        .faq__q{font-weight:600;font-size:1.05rem;margin-bottom:6px}
+        .faq__a{color:var(--text-secondary);font-size:0.95rem;line-height:1.7}
+
+        /* CTA */
+        .cta-section{background:var(--cat-color);color:#fff;text-align:center;padding:72px 20px}
+        .cta-section__title{font-size:clamp(1.5rem,4vw,2.2rem);font-weight:700;margin-bottom:12px;letter-spacing:-0.02em}
+        .cta-section__text{opacity:0.9;font-size:1.1rem;max-width:500px;margin:0 auto 24px}
+        .cta-section .btn--primary{background:#fff;color:var(--cat-color);font-size:1.05rem;padding:15px 36px}
+
         /* FOOTER */
-        .footer{background:var(--color-bg-dark);color:#94a3b8;padding:var(--spacing-lg) var(--spacing-sm);text-align:center;font-size:var(--font-size-small)}
-        .footer__link{color:var(--color-primary-light);text-decoration:none}
-        /* WHATSAPP FLOAT */
-        .whatsapp-btn{position:fixed;bottom:24px;right:24px;z-index:9999;background:var(--color-whatsapp);color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:var(--shadow-lg);transition:transform 0.2s, box-shadow 0.2s;font-size:24px}
-        .whatsapp-btn:hover{transform:scale(1.1);box-shadow:var(--shadow-xl)}
-        /* ANIMATIONS */
-        .fade-up{opacity:0;transform:translateY(30px);transition:all 0.6s ease}
-        .fade-up.show{opacity:1;transform:translateY(0)}
-        /* RESPONSIVE */
+        .footer{background:#1a1a1a;color:rgba(255,255,255,0.5);padding:32px 20px;text-align:center;font-size:0.85rem}
+        .footer__link{color:rgba(255,255,255,0.7);text-decoration:underline;text-underline-offset:3px}
+
+        /* FLOATING */
+        .fab{position:fixed;bottom:24px;right:24px;z-index:999;width:54px;height:54px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.4rem;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.2s}
+        .fab:hover{transform:scale(1.1)}
+
         @media(max-width:768px){
-            :root{--font-size-h1:2rem;--font-size-h2:1.5rem;--font-size-h3:1.2rem}
-            .gallery__grid{grid-template-columns:repeat(2,1fr)}
-            .hero__ctas{flex-direction:column}
-            .whatsapp-btn{width:48px;height:48px;font-size:20px;bottom:16px;right:16px}
+            .hero{min-height:400px}
+            .menu-grid{grid-template-columns:1fr}
+            .gallery-grid{grid-template-columns:repeat(2,1fr)}
+            .gallery-grid__item:first-child{grid-column:span 1;grid-row:span 1;aspect-ratio:4/3}
+            .info-grid{grid-template-columns:1fr}
         }
         @media(max-width:480px){
-            .gallery__grid{grid-template-columns:1fr}
-            .cards,.info{grid-template-columns:1fr}
+            .gallery-grid{grid-template-columns:1fr}
+            .hero__ctas{flex-direction:column;align-items:center}
         }
     </style>
 </head>
 <body>
 
-<header class="header"><div class="header__inner">
-    <a href="#" class="header__logo"><span>&#9679;</span> Electricitat Navarro</a>
-    
-    <a href="tel:+34 610 55 42 87" class="header__cta">&#128222; Llamar</a>
-    
-</div></header>
+<header class="header" id="header">
+    <div class="header__inner">
+        <a href="#" class="header__logo"><span class="header__logo-dot"></span>Electricitat Navarro</a>
+        
+        <a href="tel:+34 610 55 42 87" class="header__cta">Llamar</a>
+        
+    </div>
+</header>
 
-<section class="hero has-bg">
+<section class="hero">
     
-    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800" alt="Electricitat Navarro" class="hero__bg-img" loading="eager">
+    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800" alt="" class="hero__bg" loading="eager">
     
+    <div class="hero__overlay"></div>
     <div class="hero__inner">
-        <span class="hero__tag">Electricista</span>
+        <span class="hero__badge">Electricista</span>
         <h1 class="hero__title">Electricitat Navarro</h1>
         
-        <div class="rating">
-            <span class="stars">&#11088; 4.9 / 5</span>
-            <span class="rating__score">4.9</span>
-            <span class="rating__count">34 rese&ntilde;as</span>
+        <div class="hero__rating">
+            <span class="hero__stars">★ 4.9 / 5</span>
+            <strong>4.9</strong>
+            <span style="opacity:0.7">· 34 reseñas</span>
         </div>
         
-        <p class="hero__subtitle">Carrer de la Reina, 8, 46800 Xativa, Valencia</p>
+        <p class="hero__address">Carrer de la Reina, 8, 46800 Xativa, Valencia</p>
         <div class="hero__ctas">
             
-            <a href="tel:+34 610 55 42 87" class="hero__btn hero__btn--primary">&#128222; Llamar +34 610 55 42 87</a>
+            <a href="tel:+34 610 55 42 87" class="btn btn--primary">📞 +34 610 55 42 87</a>
             
             
-            <a href="https://maps.google.com/?q=38.9880,-0.5150" target="_blank" rel="noopener" class="hero__btn hero__btn--outline">&#128205; C&oacute;mo llegar</a>
+            <a href="https://maps.google.com/?q=38.9880,-0.5150" target="_blank" rel="noopener" class="btn btn--outline">📍 Cómo llegar</a>
             
         </div>
     </div>
@@ -181,8 +192,9 @@
 
 <section class="section">
     <div class="container">
-        <h2 class="section__title">&#128172; Sobre nosotros</h2>
-        <p class="section__subtitle">Servicios electricos profesionales en Xativa y toda la comarca de La Costera. Instalaciones nuevas, reformas, averias urgentes y boletines electricos (CIE). Servicio 24 horas para urgencias. Electricistas certificados con mas de 20 anos de experiencia.</p>
+        <div class="about">
+            <p class="about__text">Servicios electricos profesionales en Xativa y toda la comarca de La Costera. Instalaciones nuevas, reformas, averias urgentes y boletines electricos (CIE). Servicio 24 horas para urgencias. Electricistas certificados con mas de 20 anos de experiencia.</p>
+        </div>
     </div>
 </section>
 
@@ -190,160 +202,226 @@
 
 
 
-<section class="section section--warm">
-    <h2 class="section__title">&#128736; Nuestros Servicios</h2>
-    <p class="section__subtitle">Especialistas en lo que necesitas</p>
-    <div class="cards">
-        
-        <div class="card">
-            <div class="card__icon">⚡</div>
-            <h3 class="card__title">Urgencias 24h</h3>
-            <p class="card__text">Averias electricas urgentes. Cortocircuitos, saltos de diferencial, apagones. Respuesta en menos de 1 hora.</p>
+<section class="section section--alt" id="servicios">
+    <div class="container">
+        <div class="section__header">
+            <span class="section__label">Servicios</span>
+            <h2 class="section__title">Lo que hacemos</h2>
+            <p class="section__subtitle">Especialistas en lo que necesitas, con la garantía de toda una vida de oficio</p>
+        </div>
+        <div class="menu-grid">
+            
+            <div class="menu-card">
+                <div class="menu-card__body">
+                    <div class="menu-card__name" style="align-items:center">
+                        <span style="display:flex;align-items:center;gap:10px">⚡ Urgencias 24h</span>
+                        
+                    </div>
+                    <p class="menu-card__desc">Averias electricas urgentes. Cortocircuitos, saltos de diferencial, apagones. Respuesta en menos de 1 hora.</p>
+                </div>
+            </div>
+            
+            <div class="menu-card">
+                <div class="menu-card__body">
+                    <div class="menu-card__name" style="align-items:center">
+                        <span style="display:flex;align-items:center;gap:10px">🔌 Instalaciones Nuevas</span>
+                        
+                    </div>
+                    <p class="menu-card__desc">Instalaciones electricas completas para viviendas, locales y naves. Proyectos y memorias tecnicas.</p>
+                </div>
+            </div>
+            
+            <div class="menu-card">
+                <div class="menu-card__body">
+                    <div class="menu-card__name" style="align-items:center">
+                        <span style="display:flex;align-items:center;gap:10px">🛠️ Reformas</span>
+                        
+                    </div>
+                    <p class="menu-card__desc">Renovacion de instalaciones antiguas, cambio de cuadros electricos, domotizacion.</p>
+                </div>
+            </div>
+            
+            <div class="menu-card">
+                <div class="menu-card__body">
+                    <div class="menu-card__name" style="align-items:center">
+                        <span style="display:flex;align-items:center;gap:10px">📋 Boletines CIE</span>
+                        
+                    </div>
+                    <p class="menu-card__desc">Emitimos certificados de instalacion electrica y boletines oficiales para contratos de luz.</p>
+                </div>
+            </div>
+            
+            <div class="menu-card">
+                <div class="menu-card__body">
+                    <div class="menu-card__name" style="align-items:center">
+                        <span style="display:flex;align-items:center;gap:10px">🔋 Mantenimiento</span>
+                        
+                    </div>
+                    <p class="menu-card__desc">Contratos de mantenimiento para comunidades, empresas y negocios. Evita averias antes de que ocurran.</p>
+                </div>
+            </div>
+            
+            <div class="menu-card">
+                <div class="menu-card__body">
+                    <div class="menu-card__name" style="align-items:center">
+                        <span style="display:flex;align-items:center;gap:10px">💡 Iluminacion LED</span>
+                        
+                    </div>
+                    <p class="menu-card__desc">Sustitucion e instalacion de iluminacion LED de bajo consumo. Ahorra hasta un 80% en tu factura.</p>
+                </div>
+            </div>
             
         </div>
-        
-        <div class="card">
-            <div class="card__icon">🔌</div>
-            <h3 class="card__title">Instalaciones Nuevas</h3>
-            <p class="card__text">Instalaciones electricas completas para viviendas, locales y naves. Proyectos y memorias tecnicas.</p>
-            
-        </div>
-        
-        <div class="card">
-            <div class="card__icon">🛠️</div>
-            <h3 class="card__title">Reformas</h3>
-            <p class="card__text">Renovacion de instalaciones antiguas, cambio de cuadros electricos, domotizacion.</p>
-            
-        </div>
-        
-        <div class="card">
-            <div class="card__icon">📋</div>
-            <h3 class="card__title">Boletines CIE</h3>
-            <p class="card__text">Emitimos certificados de instalacion electrica y boletines oficiales para contratos de luz.</p>
-            
-        </div>
-        
-        <div class="card">
-            <div class="card__icon">🔋</div>
-            <h3 class="card__title">Mantenimiento</h3>
-            <p class="card__text">Contratos de mantenimiento para comunidades, empresas y negocios. Evita averias antes de que ocurran.</p>
-            
-        </div>
-        
-        <div class="card">
-            <div class="card__icon">💡</div>
-            <h3 class="card__title">Iluminacion LED</h3>
-            <p class="card__text">Sustitucion e instalacion de iluminacion LED de bajo consumo. Ahorra hasta un 80% en tu factura.</p>
-            
-        </div>
-        
     </div>
 </section>
 
 
 
-
-<section class="section">
-    <h2 class="section__title">&#128338; Informaci&oacute;n &uacute;til</h2>
-    <div class="info">
-        
-        <div class="info-card">
-            <div class="info-card__icon">&#128222;</div>
-            <h3 class="info-card__title">Tel&eacute;fono</h3>
-            <a href="tel:+34 610 55 42 87" class="info-card__link">+34 610 55 42 87</a>
+<section class="section" id="galeria">
+    <div class="container">
+        <div class="section__header">
+            <span class="section__label">Galería</span>
+            <h2 class="section__title">El espacio</h2>
+            <p class="section__subtitle">Ven a conocerlo en persona, pero mientras tanto...</p>
         </div>
-        
-        
-        <div class="info-card">
-            <div class="info-card__icon">&#128205;</div>
-            <h3 class="info-card__title">Direcci&oacute;n</h3>
-            <p class="info-card__text">Carrer de la Reina, 8, 46800 Xativa, Valencia</p>
+        <div class="gallery-grid">
             
-            <a href="https://maps.google.com/?q=38.9880,-0.5150" target="_blank" rel="noopener" class="info-card__link">Abrir en Google Maps &rarr;</a>
+            <div class="gallery-grid__item">
+                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800" alt="Electricitat Navarro — foto 1" class="gallery-grid__img" loading="lazy">
+            </div>
             
         </div>
-        
-        
-        <div class="info-card">
-            <div class="info-card__icon">&#9733;</div>
-            <h3 class="info-card__title">Valoraci&oacute;n</h3>
-            <p class="info-card__text">4.9 / 5 &bull; 34 rese&ntilde;as</p>
-        </div>
-        
-        
-        <div class="info-card">
-            <div class="info-card__icon">&#127991;</div>
-            <h3 class="info-card__title">Categor&iacute;a</h3>
-            <p class="info-card__text">Electricista</p>
-            <p class="info-card__text">Electricista</p>
-        </div>
-        
     </div>
 </section>
 
 
 <section class="section section--alt">
     <div class="container">
-        <h2 class="section__title">&#128339; Horario</h2>
-        <ul class="hours">
-        
-            <li class="hours__item"><span class="hours__day">Lunes-Viernes: 09:00-19:00</span></li>
-        
-            <li class="hours__item"><span class="hours__day">Sabado: 09:00-14:00</span></li>
-        
-            <li class="hours__item"><span class="hours__day">Urgencias: 24h</span></li>
-        
-        </ul>
+        <div class="section__header">
+            <span class="section__label">Info</span>
+            <h2 class="section__title">Datos útiles</h2>
+        </div>
+        <div class="info-grid">
+            
+            <div class="info-card">
+                <div class="info-card__icon">📞</div>
+                <div class="info-card__content">
+                    <div class="info-card__label">Teléfono</div>
+                    <div class="info-card__value">+34 610 55 42 87</div>
+                    <a href="tel:+34 610 55 42 87" class="info-card__link">Llamar →</a>
+                </div>
+            </div>
+            
+            
+            <div class="info-card">
+                <div class="info-card__icon">📍</div>
+                <div class="info-card__content">
+                    <div class="info-card__label">Dirección</div>
+                    <div class="info-card__value">Carrer de la Reina, 8, 46800 Xativa, Valencia</div>
+                    
+                    <a href="https://maps.google.com/?q=38.9880,-0.5150" target="_blank" rel="noopener" class="info-card__link">Google Maps →</a>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="info-card">
+                <div class="info-card__icon">⭐</div>
+                <div class="info-card__content">
+                    <div class="info-card__label">Valoración</div>
+                    <div class="info-card__value">4.9 / 5</div>
+                    <span style="font-size:0.85rem;color:var(--text-secondary)">34 reseñas en Google</span>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <div class="info-card__icon">🏷️</div>
+                <div class="info-card__content">
+                    <div class="info-card__label">Categoría</div>
+                    <div class="info-card__value">Electricista</div>
+                    <span style="font-size:0.85rem;color:var(--text-secondary)">Electricista</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section" id="horario">
+    <div class="container">
+        <div class="section__header">
+            <span class="section__label">Horario</span>
+            <h2 class="section__title">Cuándo abrimos</h2>
+        </div>
+        <div class="hours">
+            
+            <div class="hours__row hours__today">
+                <span class="hours__day">Lunes-Viernes: 09:00-19:00</span>
+            </div>
+            
+            <div class="hours__row">
+                <span class="hours__day">Sabado: 09:00-14:00</span>
+            </div>
+            
+            <div class="hours__row">
+                <span class="hours__day">Urgencias: 24h</span>
+            </div>
+            
+        </div>
     </div>
 </section>
 
 
 
-<section class="section">
-    <h2 class="section__title">&#10067; Preguntas Frecuentes</h2>
-    <div class="faq">
-    
-    <div class="faq__item">
-        <p class="faq__q">&#128172; Cuanto tardan en llegar para una urgencia?</p>
-        <p class="faq__a">En Xativa capital llegamos en menos de 1 hora. Para pueblos de la comarca, entre 1 y 2 horas.</p>
-    </div>
-    
-    <div class="faq__item">
-        <p class="faq__q">&#128172; Dan garantia de sus trabajos?</p>
-        <p class="faq__a">Si, todos nuestros trabajos tienen garantia por escrito de 2 anos.</p>
-    </div>
-    
-    <div class="faq__item">
-        <p class="faq__q">&#128172; Hacen presupuestos sin compromiso?</p>
-        <p class="faq__a">Si, nos desplaciamos sin coste para valorar el trabajo y damos presupuesto detallado sin compromiso.</p>
-    </div>
-    
-    <div class="faq__item">
-        <p class="faq__q">&#128172; Que zonas cubren?</p>
-        <p class="faq__a">Xativa y toda la comarca de La Costera: Canals, L'Alcudia de Crespins, Moixent, Vallada, Genoves, El Genoves, y pueblos cercanos.</p>
-    </div>
-    
+<section class="section section--alt" id="faq">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title">Preguntas frecuentes</h2>
+        </div>
+        <div class="faq">
+            
+            <div class="faq__item">
+                <p class="faq__q">Cuanto tardan en llegar para una urgencia?</p>
+                <p class="faq__a">En Xativa capital llegamos en menos de 1 hora. Para pueblos de la comarca, entre 1 y 2 horas.</p>
+            </div>
+            
+            <div class="faq__item">
+                <p class="faq__q">Dan garantia de sus trabajos?</p>
+                <p class="faq__a">Si, todos nuestros trabajos tienen garantia por escrito de 2 anos.</p>
+            </div>
+            
+            <div class="faq__item">
+                <p class="faq__q">Hacen presupuestos sin compromiso?</p>
+                <p class="faq__a">Si, nos desplaciamos sin coste para valorar el trabajo y damos presupuesto detallado sin compromiso.</p>
+            </div>
+            
+            <div class="faq__item">
+                <p class="faq__q">Que zonas cubren?</p>
+                <p class="faq__a">Xativa y toda la comarca de La Costera: Canals, L'Alcudia de Crespins, Moixent, Vallada, Genoves, El Genoves, y pueblos cercanos.</p>
+            </div>
+            
+        </div>
     </div>
 </section>
 
 
-<section class="cta"><div class="cta__inner">
-    <h2 class="cta__title">&iquest;Hablamos?</h2>
-    <p class="cta__text">Contacta con Electricitat Navarro para m&aacute;s informaci&oacute;n o presupuesto sin compromiso.</p>
+<section class="cta-section">
+    <h2 class="cta-section__title">¿Vienes a comer?</h2>
+    <p class="cta-section__text">Llama y reserva tu mesa. O pásate sin avisar, que aquí siempre cabe uno más.</p>
     
-    <a href="tel:+34 610 55 42 87" class="cta__button">&#128222; +34 610 55 42 87</a>
+    <a href="tel:+34 610 55 42 87" class="btn btn--primary">+34 610 55 42 87</a>
     
-</div></section>
+</section>
 
 <footer class="footer">
-    <p>Electricitat Navarro &middot; Carrer de la Reina, 8, 46800 Xativa, Valencia &middot; España</p>
+    <p>Electricitat Navarro · Carrer de la Reina, 8, 46800 Xativa, Valencia</p>
     
-    <p style="margin-top:var(--spacing-xs)"><a href="https://maps.google.com/?q=38.9880,-0.5150" target="_blank" rel="noopener" class="footer__link">Ver en Google Maps</a></p>
+    <p style="margin-top:8px"><a href="https://maps.google.com/?q=38.9880,-0.5150" target="_blank" rel="noopener" class="footer__link">Abrir en Google Maps</a></p>
     
 </footer>
 
 
-<a href="https://wa.me/34610554287" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Chat de WhatsApp">&#128172;</a>
+<a href="https://wa.me/34610554287" target="_blank" rel="noopener" class="fab" aria-label="WhatsApp">💬</a>
 
 
 </body>
