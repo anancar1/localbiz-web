@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perruqueria Estil — peluqueria en Xàtiva, Valencia. Contacta y conoce nuestros servicios.">
+    <title>Perruqueria Estil — Peluqueria en Xàtiva</title>
+    <style>
+        :root {
+            --color-primary: #d97706;
+            --color-primary-dark: #b45309;
+            --color-primary-light: #fbbf24;
+            --color-secondary: #0f172a;
+            --color-accent: #059669;
+            --color-bg: #ffffff;
+            --color-bg-alt: #f8fafc;
+            --color-bg-warm: #fffbeb;
+            --color-bg-dark: #0f172a;
+            --color-text: #1e293b;
+            --color-text-light: #64748b;
+            --color-text-white: #ffffff;
+            --color-border: #e2e8f0;
+            --color-star: #f59e0b;
+            --color-whatsapp: #25d366;
+            --font-heading: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            --font-size-h1: 2.75rem;
+            --font-size-h2: 2rem;
+            --font-size-h3: 1.4rem;
+            --font-size-body: 1.05rem;
+            --font-size-small: 0.875rem;
+            --font-size-xs: 0.75rem;
+            --spacing-xs: 0.4rem;
+            --spacing-sm: 0.8rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 5rem;
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 20px;
+            --radius-full: 9999px;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
+            --cat-color: #d97706;
+        }
+        
+            :root { --cat-color: #7c3aed; }
+        
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{font-family:var(--font-body);font-size:var(--font-size-body);color:var(--color-text);background:var(--color-bg);line-height:1.7;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+        img{max-width:100%;display:block}
+        a{color:inherit}
+        .container{max-width:1100px;margin:0 auto;padding:0 var(--spacing-sm)}
+        /* HEADER */
+        .header{background:var(--color-bg);box-shadow:var(--shadow-sm);position:sticky;top:0;z-index:1000;height:72px}
+        .header__inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:100%;padding:0 var(--spacing-sm)}
+        .header__logo{font-family:var(--font-heading);font-size:var(--font-size-h3);font-weight:700;color:var(--color-text);text-decoration:none}
+        .header__logo span{color:var(--cat-color)}
+        .header__cta{background:var(--cat-color);color:#fff;padding:10px 24px;border-radius:var(--radius-full);text-decoration:none;font-weight:600;font-size:var(--font-size-small);transition:transform 0.2s}
+        .header__cta:hover{transform:scale(1.03)}
+        /* HERO */
+        .hero{position:relative;background:var(--color-bg-dark);color:var(--color-text-white);padding:var(--spacing-xl) var(--spacing-sm);text-align:center;overflow:hidden}
+        .hero__inner{max-width:800px;margin:0 auto;position:relative;z-index:2}
+        .hero__tag{display:inline-block;background:var(--cat-color);padding:6px 20px;border-radius:var(--radius-full);font-size:var(--font-size-small);font-weight:600;margin-bottom:var(--spacing-sm)}
+        .hero__title{font-family:var(--font-heading);font-size:var(--font-size-h1);margin-bottom:var(--spacing-sm);line-height:1.2}
+        .hero__subtitle{font-size:var(--font-size-h3);color:#cbd5e1;margin-bottom:var(--spacing-md)}
+        .hero__ctas{display:flex;gap:var(--spacing-sm);justify-content:center;flex-wrap:wrap}
+        .hero__btn{display:inline-block;padding:12px 32px;border-radius:var(--radius-full);text-decoration:none;font-weight:700;font-size:var(--font-size-body);transition:transform 0.2s, box-shadow 0.2s}
+        .hero__btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+        .hero__btn--primary{background:var(--color-text-white);color:var(--color-text)}
+        .hero__btn--outline{border:2px solid var(--color-text-white);color:var(--color-text-white)}
+        .hero__bg-img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.35;z-index:1}
+        /* SECTIONS */
+        .section{padding:var(--spacing-lg) var(--spacing-sm)}
+        .section__title{font-family:var(--font-heading);font-size:var(--font-size-h2);margin-bottom:var(--spacing-xs);text-align:center}
+        .section__subtitle{color:var(--color-text-light);text-align:center;margin-bottom:var(--spacing-md);max-width:600px;margin-left:auto;margin-right:auto}
+        .section--alt{background:var(--color-bg-alt)}
+        .section--warm{background:var(--color-bg-warm)}
+        /* CARDS */
+        .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--spacing-md);max-width:1100px;margin:0 auto;padding:0 var(--spacing-sm)}
+        .card{background:var(--color-bg);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);padding:var(--spacing-md);transition:transform 0.2s, box-shadow 0.2s;border:1px solid var(--color-border)}
+        .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+        .card__icon{font-size:2rem;margin-bottom:var(--spacing-sm)}
+        .card__title{font-family:var(--font-heading);font-size:var(--font-size-h3);margin-bottom:var(--spacing-xs)}
+        .card__text{color:var(--color-text-light);font-size:var(--font-size-small)}
+        .card__price{display:inline-block;margin-top:var(--spacing-sm);font-weight:700;color:var(--cat-color);font-size:var(--font-size-h3)}
+        /* INFO GRID */
+        .info{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:var(--spacing-md);max-width:1100px;margin:0 auto;padding:0 var(--spacing-sm)}
+        .info-card{background:var(--color-bg-alt);padding:var(--spacing-md);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);border:1px solid var(--color-border)}
+        .info-card__icon{font-size:1.5rem;margin-bottom:var(--spacing-xs)}
+        .info-card__title{font-family:var(--font-heading);font-size:var(--font-size-h3);margin-bottom:var(--spacing-xs)}
+        .info-card__text{color:var(--color-text-light);font-size:var(--font-size-small)}
+        .info-card__link{color:var(--cat-color);text-decoration:none;font-weight:600;display:inline-block;margin-top:var(--spacing-sm)}
+        /* GALLERY */
+        .gallery{max-width:1100px;margin:0 auto;padding:0 var(--spacing-sm)}
+        .gallery__grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:var(--spacing-sm)}
+        .gallery__item{border-radius:var(--radius-md);overflow:hidden;position:relative;aspect-ratio:1/1}
+        .gallery__img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s}
+        .gallery__item:hover .gallery__img{transform:scale(1.05)}
+        /* HOURS */
+        .hours{list-style:none;display:grid;gap:var(--spacing-xs);max-width:500px;margin:0 auto}
+        .hours__item{display:flex;justify-content:space-between;padding:var(--spacing-xs) var(--spacing-md);background:var(--color-bg-alt);border-radius:var(--radius-sm)}
+        .hours__day{font-weight:600}.hours__time{color:var(--color-text-light)}
+        /* RATING */
+        .stars{color:var(--color-star);font-size:1.2rem}
+        .rating{display:inline-flex;align-items:center;gap:var(--spacing-xs);margin-bottom:var(--spacing-sm)}
+        .rating__score{font-weight:700;font-size:var(--font-size-h3)}
+        .rating__count{color:var(--color-text-light);font-size:var(--font-size-small)}
+        /* FAQ */
+        .faq{max-width:750px;margin:0 auto;padding:0 var(--spacing-sm)}
+        .faq__item{background:var(--color-bg-alt);border-radius:var(--radius-md);padding:var(--spacing-md);margin-bottom:var(--spacing-sm);border:1px solid var(--color-border)}
+        .faq__q{font-weight:700;margin-bottom:var(--spacing-xs);color:var(--color-text)}
+        .faq__a{color:var(--color-text-light);font-size:var(--font-size-small)}
+        /* CTA SECTION */
+        .cta{background:linear-gradient(135deg, var(--color-bg-dark), #1a2a40);color:var(--color-text-white);padding:var(--spacing-xl) var(--spacing-sm);text-align:center}
+        .cta__inner{max-width:650px;margin:0 auto}
+        .cta__title{font-family:var(--font-heading);font-size:var(--font-size-h2);margin-bottom:var(--spacing-sm)}
+        .cta__text{margin-bottom:var(--spacing-md);opacity:0.9;font-size:var(--font-size-body)}
+        .cta__button{display:inline-block;background:var(--cat-color);color:var(--color-text-white);padding:14px 40px;border-radius:var(--radius-full);text-decoration:none;font-weight:700;font-size:var(--font-size-body);transition:transform 0.2s, box-shadow 0.2s}
+        .cta__button:hover{transform:scale(1.04);box-shadow:var(--shadow-lg)}
+        /* FOOTER */
+        .footer{background:var(--color-bg-dark);color:#94a3b8;padding:var(--spacing-lg) var(--spacing-sm);text-align:center;font-size:var(--font-size-small)}
+        .footer__link{color:var(--color-primary-light);text-decoration:none}
+        /* WHATSAPP FLOAT */
+        .whatsapp-btn{position:fixed;bottom:24px;right:24px;z-index:9999;background:var(--color-whatsapp);color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:var(--shadow-lg);transition:transform 0.2s, box-shadow 0.2s;font-size:24px}
+        .whatsapp-btn:hover{transform:scale(1.1);box-shadow:var(--shadow-xl)}
+        /* ANIMATIONS */
+        .fade-up{opacity:0;transform:translateY(30px);transition:all 0.6s ease}
+        .fade-up.show{opacity:1;transform:translateY(0)}
+        /* RESPONSIVE */
+        @media(max-width:768px){
+            :root{--font-size-h1:2rem;--font-size-h2:1.5rem;--font-size-h3:1.2rem}
+            .gallery__grid{grid-template-columns:repeat(2,1fr)}
+            .hero__ctas{flex-direction:column}
+            .whatsapp-btn{width:48px;height:48px;font-size:20px;bottom:16px;right:16px}
+        }
+        @media(max-width:480px){
+            .gallery__grid{grid-template-columns:1fr}
+            .cards,.info{grid-template-columns:1fr}
+        }
+    </style>
+</head>
+<body>
+
+<header class="header"><div class="header__inner">
+    <a href="#" class="header__logo"><span>&#9679;</span> Perruqueria Estil</a>
+    
+    <a href="tel:+34 962 28 91 45" class="header__cta">&#128222; Llamar</a>
+    
+</div></header>
+
+<section class="hero has-bg">
+    
+    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800" alt="Perruqueria Estil" class="hero__bg-img" loading="eager">
+    
+    <div class="hero__inner">
+        <span class="hero__tag">Peluqueria</span>
+        <h1 class="hero__title">Perruqueria Estil</h1>
+        
+        <div class="rating">
+            <span class="stars">&#11088; 4.8 / 5</span>
+            <span class="rating__score">4.8</span>
+            <span class="rating__count">53 rese&ntilde;as</span>
+        </div>
+        
+        <p class="hero__subtitle">Avinguda de Selgas, 12, 46800 Xativa, Valencia</p>
+        <div class="hero__ctas">
+            
+            <a href="tel:+34 962 28 91 45" class="hero__btn hero__btn--primary">&#128222; Llamar +34 962 28 91 45</a>
+            
+            
+            <a href="https://maps.google.com/?q=38.9895,-0.5160" target="_blank" rel="noopener" class="hero__btn hero__btn--outline">&#128205; C&oacute;mo llegar</a>
+            
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container">
+        <h2 class="section__title">&#128172; Sobre nosotros</h2>
+        <p class="section__subtitle">15 anos cuidando tu imagen en el corazon de Xativa. Especialistas en coloracion, mechas balayage, tratamientos capilares y alisados. Trabajamos con productos profesionales de primeras marcas para garantizar los mejores resultados.</p>
+    </div>
+</section>
+
+
+
+
+
+<section class="section section--warm">
+    <h2 class="section__title">&#128736; Nuestros Servicios</h2>
+    <p class="section__subtitle">Especialistas en lo que necesitas</p>
+    <div class="cards">
+        
+        <div class="card">
+            <div class="card__icon">💇</div>
+            <h3 class="card__title">Corte y Peinado</h3>
+            <p class="card__text">Corte personalizado + lavado + peinado. Asesoramiento de imagen incluido.</p>
+            <span class="card__price">22€</span>
+        </div>
+        
+        <div class="card">
+            <div class="card__icon">🎨</div>
+            <h3 class="card__title">Coloracion</h3>
+            <p class="card__text">Tinte completo, mechas balayage, babylights, reflejos. Con productos sin amoniaco.</p>
+            <span class="card__price">desde 38€</span>
+        </div>
+        
+        <div class="card">
+            <div class="card__icon">✨</div>
+            <h3 class="card__title">Tratamientos Capilares</h3>
+            <p class="card__text">Queratina, botox capilar, reestructuracion. Devuelve la vida a tu cabello.</p>
+            <span class="card__price">desde 30€</span>
+        </div>
+        
+        <div class="card">
+            <div class="card__icon">💆</div>
+            <h3 class="card__title">Peinados de Fiesta</h3>
+            <p class="card__text">Recogidos, ondas, semirecogidos para bodas, bautizos y eventos.</p>
+            <span class="card__price">desde 35€</span>
+        </div>
+        
+        <div class="card">
+            <div class="card__icon">👰</div>
+            <h3 class="card__title">Pack Novia</h3>
+            <p class="card__text">Prueba + peinado el gran dia + maquillaje profesional + tratamiento pre-boda.</p>
+            <span class="card__price">desde 150€</span>
+        </div>
+        
+        <div class="card">
+            <div class="card__icon">✂️</div>
+            <h3 class="card__title">Arreglo de Barba</h3>
+            <p class="card__text">Perfilado, recorte, cuidado facial. Tambien hacemos caballero.</p>
+            <span class="card__price">10€</span>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+<section class="section">
+    <h2 class="section__title">&#128338; Informaci&oacute;n &uacute;til</h2>
+    <div class="info">
+        
+        <div class="info-card">
+            <div class="info-card__icon">&#128222;</div>
+            <h3 class="info-card__title">Tel&eacute;fono</h3>
+            <a href="tel:+34 962 28 91 45" class="info-card__link">+34 962 28 91 45</a>
+        </div>
+        
+        
+        <div class="info-card">
+            <div class="info-card__icon">&#128205;</div>
+            <h3 class="info-card__title">Direcci&oacute;n</h3>
+            <p class="info-card__text">Avinguda de Selgas, 12, 46800 Xativa, Valencia</p>
+            
+            <a href="https://maps.google.com/?q=38.9895,-0.5160" target="_blank" rel="noopener" class="info-card__link">Abrir en Google Maps &rarr;</a>
+            
+        </div>
+        
+        
+        <div class="info-card">
+            <div class="info-card__icon">&#9733;</div>
+            <h3 class="info-card__title">Valoraci&oacute;n</h3>
+            <p class="info-card__text">4.8 / 5 &bull; 53 rese&ntilde;as</p>
+        </div>
+        
+        
+        <div class="info-card">
+            <div class="info-card__icon">&#127991;</div>
+            <h3 class="info-card__title">Categor&iacute;a</h3>
+            <p class="info-card__text">Peluqueria</p>
+            <p class="info-card__text">Peluqueria unisex</p>
+        </div>
+        
+    </div>
+</section>
+
+
+<section class="section section--alt">
+    <div class="container">
+        <h2 class="section__title">&#128339; Horario</h2>
+        <ul class="hours">
+        
+            <li class="hours__item"><span class="hours__day">Lunes: Cerrado</span></li>
+        
+            <li class="hours__item"><span class="hours__day">Martes: 09:30-13:30, 16:00-20:00</span></li>
+        
+            <li class="hours__item"><span class="hours__day">Miercoles: 09:30-13:30, 16:00-20:00</span></li>
+        
+            <li class="hours__item"><span class="hours__day">Jueves: 09:30-13:30, 16:00-20:00</span></li>
+        
+            <li class="hours__item"><span class="hours__day">Viernes: 09:30-13:30, 16:00-20:00</span></li>
+        
+            <li class="hours__item"><span class="hours__day">Sabado: 09:30-14:00</span></li>
+        
+            <li class="hours__item"><span class="hours__day">Domingo: Cerrado</span></li>
+        
+        </ul>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <h2 class="section__title">&#10067; Preguntas Frecuentes</h2>
+    <div class="faq">
+    
+    <div class="faq__item">
+        <p class="faq__q">&#128172; Hay que pedir cita?</p>
+        <p class="faq__a">Si, trabajamos con cita previa para garantizar la mejor atencion. Puedes llamarnos o enviar un WhatsApp.</p>
+    </div>
+    
+    <div class="faq__item">
+        <p class="faq__q">&#128172; Cuanto dura un tratamiento de queratina?</p>
+        <p class="faq__a">Entre 2 y 4 meses dependiendo del tipo de cabello y los cuidados posteriores.</p>
+    </div>
+    
+    </div>
+</section>
+
+
+<section class="cta"><div class="cta__inner">
+    <h2 class="cta__title">&iquest;Hablamos?</h2>
+    <p class="cta__text">Contacta con Perruqueria Estil para m&aacute;s informaci&oacute;n o presupuesto sin compromiso.</p>
+    
+    <a href="tel:+34 962 28 91 45" class="cta__button">&#128222; +34 962 28 91 45</a>
+    
+</div></section>
+
+<footer class="footer">
+    <p>Perruqueria Estil &middot; Avinguda de Selgas, 12, 46800 Xativa, Valencia &middot; España</p>
+    
+    <p style="margin-top:var(--spacing-xs)"><a href="https://maps.google.com/?q=38.9895,-0.5160" target="_blank" rel="noopener" class="footer__link">Ver en Google Maps</a></p>
+    
+</footer>
+
+
+<a href="https://wa.me/34962289145" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Chat de WhatsApp">&#128172;</a>
+
+
+</body>
+</html>
